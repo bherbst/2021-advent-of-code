@@ -27,7 +27,7 @@ fun main() {
     println(part2(input))
 }
 
-fun executeCommand(command: String, sub: Submarine) {
+private fun executeCommand(command: String, sub: Submarine) {
     val (direction, amountStr) = command.split(" ")
     val amount = amountStr.toInt()
     when (direction) {
@@ -37,13 +37,13 @@ fun executeCommand(command: String, sub: Submarine) {
     }
 }
 
-interface Submarine {
+private interface Submarine {
     fun down(amount: Int)
     fun up(amount: Int)
     fun forward(amount: Int)
 }
 
-class Sub1 : Submarine {
+private class Sub1 : Submarine {
     var horizontal: Int = 0
         private set
 
